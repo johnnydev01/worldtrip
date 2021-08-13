@@ -8,6 +8,7 @@ import "swiper/components/pagination/pagination.min.css";
 import styles from './styles.module.scss';
 
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 export function Carrousel() {
     SwiperCore.use([Navigation,Pagination]);
@@ -20,7 +21,9 @@ export function Carrousel() {
                         <Box boxSize="6xl" mt="30" >
                             <Image src="/images/europe.png" ></Image>
                         </Box>
-                        <Text fontWeight="700" fontSize="48px" color="white.100" position="absolute">Europa</Text>
+                        <Link href="/continent">
+                            <Text cursor="pointer" fontWeight="700" fontSize="48px" color="white.100" position="absolute">Europa</Text>
+                        </Link>
                         <Text fontWeight="700" fontSize="24px" color="white.100" position="absolute" mt="24" lineHeight="36px">O continente mais antigo</Text>
                     </Flex>
                 </SwiperSlide>
